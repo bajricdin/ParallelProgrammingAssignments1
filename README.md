@@ -1,4 +1,4 @@
-# Parallel Global Sum Assignment
+# Parallel algorithms and patterns Assignment
 
 ## What the Code Does
 The code computes the sum of an array using four methods: Standard Double, Pairwise, Kahan, and Knuth summation. It initializes an array with high values first, then low (Leblanc problem), calculates the sum, compares it with the accurate sum, and measures runtime.
