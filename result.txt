@@ -1,0 +1,259 @@
+(base) student@itcenter-lab128:~/Downloads/ParallelComputing-week-5$ ./sum_test
+========================================
+
+========================================
+TESTING WITH 2^10 = 1024 elements
+========================================
+Initializing array (Leblanc problem: high values first, then low values)
+Expected accurate sum: 51.2000000512    
+
+  accurate sum 51.2000000512     sum 51.20000005120137 diff  1.371e-12 relative diff  2.678e-14 runtime 0.000005      Standard double sum
+  accurate sum 51.2000000512     sum 51.2000000512     diff          0 relative diff          0 runtime 0.000013
+   Pairwise summation
+  accurate sum 51.2000000512     sum 51.2000000512     diff          0 relative diff          0 runtime 0.000014
+   Kahan summation
+  accurate sum 51.2000000512     sum 51.2000000512     diff          0 relative diff          0 runtime 0.000011
+   Knuth summation
+
+========================================
+TESTING WITH 2^11 = 2048 elements
+========================================
+Initializing array (Leblanc problem: high values first, then low values)
+Expected accurate sum: 102.4000001024   
+
+  accurate sum 102.4000001024    sum 102.4000001024003 diff  2.842e-13 relative diff  2.776e-15 runtime 0.000009      Standard double sum
+  accurate sum 102.4000001024    sum 102.4000001024    diff          0 relative diff          0 runtime 0.000021
+   Pairwise summation
+  accurate sum 102.4000001024    sum 102.4000001024    diff          0 relative diff          0 runtime 0.000028
+   Kahan summation
+  accurate sum 102.4000001024    sum 102.4000001024    diff          0 relative diff          0 runtime 0.000021
+   Knuth summation
+
+========================================
+TESTING WITH 2^12 = 4096 elements
+========================================
+Initializing array (Leblanc problem: high values first, then low values)
+Expected accurate sum: 204.8000002048   
+
+  accurate sum 204.8000002048    sum 204.8000002047672 diff  -3.28e-11 relative diff -1.601e-13 runtime 0.000018      Standard double sum
+  accurate sum 204.8000002048    sum 204.8000002048    diff          0 relative diff          0 runtime 0.000042
+   Pairwise summation
+  accurate sum 204.8000002048    sum 204.8000002048    diff          0 relative diff          0 runtime 0.000057
+   Kahan summation
+  accurate sum 204.8000002048    sum 204.8000002048    diff          0 relative diff          0 runtime 0.000039
+   Knuth summation
+
+========================================
+TESTING WITH 2^13 = 8192 elements
+========================================
+Initializing array (Leblanc problem: high values first, then low values)
+Expected accurate sum: 409.6000004096   
+
+  accurate sum 409.6000004096    sum 409.6000004095737 diff -2.626e-11 relative diff -6.412e-14 runtime 0.000035      Standard double sum
+  accurate sum 409.6000004096    sum 409.6000004096    diff          0 relative diff          0 runtime 0.000080
+   Pairwise summation
+  accurate sum 409.6000004096    sum 409.6000004096    diff          0 relative diff          0 runtime 0.000113
+   Kahan summation
+  accurate sum 409.6000004096    sum 409.6000004096    diff          0 relative diff          0 runtime 0.000084
+   Knuth summation
+
+========================================
+TESTING WITH 2^14 = 16384 elements
+========================================
+Initializing array (Leblanc problem: high values first, then low values)
+Expected accurate sum: 819.2000008192   
+
+  accurate sum 819.2000008192    sum 819.2000008196816 diff  4.816e-10 relative diff  5.879e-13 runtime 0.000069      Standard double sum
+  accurate sum 819.2000008192    sum 819.2000008192    diff          0 relative diff          0 runtime 0.000212
+   Pairwise summation
+  accurate sum 819.2000008192    sum 819.2000008192    diff          0 relative diff          0 runtime 0.000222
+   Kahan summation
+  accurate sum 819.2000008192    sum 819.2000008192    diff          0 relative diff          0 runtime 0.000170
+   Knuth summation
+
+========================================
+TESTING WITH 2^15 = 32768 elements
+========================================
+Initializing array (Leblanc problem: high values first, then low values)
+Expected accurate sum: 1638.4000016384  
+
+  accurate sum 1638.4000016384   sum 1638.400001638733 diff  3.331e-10 relative diff  2.033e-13 runtime 0.000135      Standard double sum
+  accurate sum 1638.4000016384   sum 1638.4000016384   diff          0 relative diff          0 runtime 0.000194
+   Pairwise summation
+  accurate sum 1638.4000016384   sum 1638.4000016384   diff          0 relative diff          0 runtime 0.000433
+   Kahan summation
+  accurate sum 1638.4000016384   sum 1638.4000016384   diff          0 relative diff          0 runtime 0.000357
+   Knuth summation
+
+========================================
+TESTING WITH 2^16 = 65536 elements
+========================================
+Initializing array (Leblanc problem: high values first, then low values)
+Expected accurate sum: 3276.8000032768  
+
+  accurate sum 3276.8000032768   sum 3276.800003276371 diff -4.293e-10 relative diff  -1.31e-13 runtime 0.000271      Standard double sum
+  accurate sum 3276.8000032768   sum 3276.8000032768   diff          0 relative diff          0 runtime 0.000568
+   Pairwise summation
+  accurate sum 3276.8000032768   sum 3276.8000032768   diff          0 relative diff          0 runtime 0.000901
+   Kahan summation
+  accurate sum 3276.8000032768   sum 3276.8000032768   diff          0 relative diff          0 runtime 0.000674
+   Knuth summation
+
+========================================
+TESTING WITH 2^17 = 131072 elements
+========================================
+Initializing array (Leblanc problem: high values first, then low values)
+Expected accurate sum: 6553.6000065536  
+
+  accurate sum 6553.6000065536   sum 6553.600006562821 diff  9.221e-09 relative diff  1.407e-12 runtime 0.000558      Standard double sum
+  accurate sum 6553.6000065536   sum 6553.6000065536   diff          0 relative diff          0 runtime 0.001066
+   Pairwise summation
+  accurate sum 6553.6000065536   sum 6553.6000065536   diff          0 relative diff          0 runtime 0.001632
+   Kahan summation
+  accurate sum 6553.6000065536   sum 6553.6000065536   diff          0 relative diff          0 runtime 0.001324
+   Knuth summation
+
+========================================
+TESTING WITH 2^18 = 262144 elements
+========================================
+Initializing array (Leblanc problem: high values first, then low values)
+Expected accurate sum: 13107.2000131072 
+
+  accurate sum 13107.2000131072  sum 13107.20001314317 diff  3.597e-08 relative diff  2.745e-12 runtime 0.001082      Standard double sum
+  accurate sum 13107.2000131072  sum 13107.2000131072  diff          0 relative diff          0 runtime 0.001900
+   Pairwise summation
+  accurate sum 13107.2000131072  sum 13107.2000131072  diff          0 relative diff          0 runtime 0.003057
+   Kahan summation
+  accurate sum 13107.2000131072  sum 13107.2000131072  diff          0 relative diff          0 runtime 0.002273
+   Knuth summation
+
+========================================
+TESTING WITH 2^19 = 524288 elements
+========================================
+Initializing array (Leblanc problem: high values first, then low values)
+Expected accurate sum: 26214.4000262144 
+
+  accurate sum 26214.4000262144  sum 26214.40002564823 diff -5.662e-07 relative diff  -2.16e-11 runtime 0.002028      Standard double sum
+  accurate sum 26214.4000262144  sum 26214.4000262144  diff          0 relative diff          0 runtime 0.003919
+   Pairwise summation
+  accurate sum 26214.4000262144  sum 26214.4000262144  diff          0 relative diff          0 runtime 0.005480
+   Kahan summation
+  accurate sum 26214.4000262144  sum 26214.4000262144  diff          0 relative diff          0 runtime 0.003999
+   Knuth summation
+
+========================================
+TESTING WITH 2^20 = 1048576 elements
+========================================
+Initializing array (Leblanc problem: high values first, then low values)
+Expected accurate sum: 52428.8000524288 
+
+  accurate sum 52428.8000524288  sum 52428.80005292332 diff  4.945e-07 relative diff  9.432e-12 runtime 0.003444      Standard double sum
+  accurate sum 52428.8000524288  sum 52428.8000524288  diff          0 relative diff          0 runtime 0.007107
+   Pairwise summation
+  accurate sum 52428.8000524288  sum 52428.8000524288  diff          0 relative diff          0 runtime 0.010099
+   Kahan summation
+  accurate sum 52428.8000524288  sum 52428.8000524288  diff          0 relative diff          0 runtime 0.006144
+   Knuth summation
+
+========================================
+TESTING WITH 2^21 = 2097152 elements
+========================================
+Initializing array (Leblanc problem: high values first, then low values)
+Expected accurate sum: 104857.6001048576
+
+  accurate sum 104857.6001048576 sum 104857.6001084272 diff   3.57e-06 relative diff  3.404e-11 runtime 0.006880      Standard double sum
+  accurate sum 104857.6001048576 sum 104857.6001048576 diff          0 relative diff          0 runtime 0.012066
+   Pairwise summation
+  accurate sum 104857.6001048576 sum 104857.6001048576 diff          0 relative diff          0 runtime 0.020457
+   Kahan summation
+  accurate sum 104857.6001048576 sum 104857.6001048576 diff          0 relative diff          0 runtime 0.012718
+   Knuth summation
+
+========================================
+TESTING WITH 2^22 = 4194304 elements
+========================================
+Initializing array (Leblanc problem: high values first, then low values)
+Expected accurate sum: 209715.2002097152
+
+  accurate sum 209715.2002097152 sum 209715.2001908246 diff -1.889e-05 relative diff -9.008e-11 runtime 0.014123      Standard double sum
+  accurate sum 209715.2002097152 sum 209715.2002097152 diff          0 relative diff          0 runtime 0.028266
+   Pairwise summation
+  accurate sum 209715.2002097152 sum 209715.2002097152 diff          0 relative diff          0 runtime 0.041131
+   Kahan summation
+  accurate sum 209715.2002097152 sum 209715.2002097152 diff          0 relative diff          0 runtime 0.024276
+   Knuth summation
+
+========================================
+TESTING WITH 2^23 = 8388608 elements
+========================================
+Initializing array (Leblanc problem: high values first, then low values)
+Expected accurate sum: 419430.4004194304
+
+  accurate sum 419430.4004194304 sum 419430.400462431  diff    4.3e-05 relative diff  1.025e-10 runtime 0.026764      Standard double sum
+  accurate sum 419430.4004194304 sum 419430.4004194304 diff          0 relative diff          0 runtime 0.057211
+   Pairwise summation
+  accurate sum 419430.4004194304 sum 419430.4004194304 diff          0 relative diff          0 runtime 0.080004
+   Kahan summation
+  accurate sum 419430.4004194304 sum 419430.4004194304 diff          0 relative diff          0 runtime 0.049808
+   Knuth summation
+
+========================================
+TESTING WITH 2^24 = 16777216 elements
+========================================
+Initializing array (Leblanc problem: high values first, then low values)
+Expected accurate sum: 838860.8008388608
+
+  accurate sum 838860.8008388608 sum 838860.800853056  diff   1.42e-05 relative diff  1.692e-11 runtime 0.052607      Standard double sum
+  accurate sum 838860.8008388608 sum 838860.8008388608 diff          0 relative diff          0 runtime 0.102580
+   Pairwise summation
+  accurate sum 838860.8008388608 sum 838860.8008388608 diff          0 relative diff          0 runtime 0.157930
+   Kahan summation
+  accurate sum 838860.8008388608 sum 838860.8008388608 diff          0 relative diff          0 runtime 0.106620
+   Knuth summation
+
+========================================
+TESTING WITH 2^25 = 33554432 elements
+========================================
+Initializing array (Leblanc problem: high values first, then low values)
+Expected accurate sum: 1677721.601677722
+
+  accurate sum 1677721.601677722 sum 1677721.600413603 diff  -0.001264 relative diff -7.535e-10 runtime 0.103457      Standard double sum
+  accurate sum 1677721.601677722 sum 1677721.601677722 diff          0 relative diff          0 runtime 0.191286
+   Pairwise summation
+  accurate sum 1677721.601677722 sum 1677721.601677722 diff          0 relative diff          0 runtime 0.317078
+   Kahan summation
+  accurate sum 1677721.601677722 sum 1677721.601677722 diff          0 relative diff          0 runtime 0.180839
+   Knuth summation
+
+========================================
+TESTING WITH 2^26 = 67108864 elements
+========================================
+Initializing array (Leblanc problem: high values first, then low values)
+Expected accurate sum: 3355443.203355443
+
+  accurate sum 3355443.203355443 sum 3355443.201976103 diff  -0.001379 relative diff -4.111e-10 runtime 0.206527      Standard double sum
+  accurate sum 3355443.203355443 sum 3355443.203355443 diff          0 relative diff          0 runtime 0.381250
+   Pairwise summation
+  accurate sum 3355443.203355443 sum 3355443.203355443 diff          0 relative diff          0 runtime 0.631110
+   Kahan summation
+  accurate sum 3355443.203355443 sum 3355443.203355443 diff          0 relative diff          0 runtime 0.351467
+   Knuth summation
+
+========================================
+TESTING WITH 2^27 = 134217728 elements
+========================================
+Initializing array (Leblanc problem: high values first, then low values)
+Expected accurate sum: 6710886.406710886
+
+  accurate sum 6710886.406710886 sum 6710886.393382353 diff   -0.01333 relative diff -1.986e-09 runtime 0.409565      Standard double sum
+  accurate sum 6710886.406710886 sum 6710886.406710886 diff          0 relative diff          0 runtime 0.786834
+   Pairwise summation
+  accurate sum 6710886.406710886 sum 6710886.406710886 diff          0 relative diff          0 runtime 1.260590
+   Kahan summation
+  accurate sum 6710886.406710886 sum 6710886.406710886 diff          0 relative diff          0 runtime 0.699711
+   Knuth summation
+
+========================================
+All tests complete!
+========================================
+(base) student@itcenter-lab128:~/Downloads/ParallelComputing-week-5$ 
