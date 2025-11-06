@@ -1,68 +1,43 @@
-# ParallelProgrammingAssignments
-First I initilized ipos and ival to avoid uninitilized values error. After that I checked if malloc succseeded in recegonizing the null or undefined behaviour.
-After that i changed the loop conditions from i <= 10 to i<10 to prevent out of bounds error. And at the end i freed allocated memory so it prevents memory leaks.
+# Week 6 – Parallel Computing Assignment  
+
+---
+
+# Liquid doesnt work
+
+<img width="835" height="147" alt="Screenshot from 2025-11-06 16-13-28" src="https://github.com/user-attachments/assets/12e3f87a-671e-4503-988e-a11e41ce6e92" />
+
+# Used perf instead
+
+<img width="831" height="829" alt="Screenshot from 2025-11-06 16-32-27" src="https://github.com/user-attachments/assets/de903ccd-ab87-4b1d-a74b-600882634eaf" />
 
 
-(base) student@itcenter-lab128:~/Desktop/din$ make valgrind
-valgrind --leak-check=full --show-leak-kinds=all ./main
-==136631== Memcheck, a memory error detector
-==136631== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==136631== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
-==136631== Command: ./main
-==136631== 
-==136631== Invalid write of size 4
-==136631==    at 0x1091C6: main (main.c:7)
-==136631==  Address 0x4a9e068 is 0 bytes after a block of size 40 alloc'd
-==136631==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==136631==    by 0x109185: main (main.c:5)
-==136631== 
-==136631== Conditional jump or move depends on uninitialised value(s)
-==136631==    at 0x1091F4: main (main.c:9)
-==136631== 
-==136631== Invalid read of size 4
-==136631==    at 0x1091EF: main (main.c:9)
-==136631==  Address 0x4a9e068 is 0 bytes after a block of size 40 alloc'd
-==136631==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==136631==    by 0x109185: main (main.c:5)
-==136631== 
-==136631== 
-==136631== HEAP SUMMARY:
-==136631==     in use at exit: 40 bytes in 1 blocks
-==136631==   total heap usage: 1 allocs, 0 frees, 40 bytes allocated
-==136631== 
-==136631== 40 bytes in 1 blocks are definitely lost in loss record 1 of 1
-==136631==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==136631==    by 0x109185: main (main.c:5)
-==136631== 
-==136631== LEAK SUMMARY:
-==136631==    definitely lost: 40 bytes in 1 blocks
-==136631==    indirectly lost: 0 bytes in 0 blocks
-==136631==      possibly lost: 0 bytes in 0 blocks
-==136631==    still reachable: 0 bytes in 0 blocks
-==136631==         suppressed: 0 bytes in 0 blocks
-==136631== 
-==136631== Use --track-origins=yes to see where uninitialised values come from
-==136631== For lists of detected and suppressed errors, rerun with: -s
-==136631== ERROR SUMMARY: 14 errors from 4 contexts (suppressed: 0 from 0)
+---
 
+## Performance Results
 
+I ran all three versions with perf to measure cycles, instructions, cache references, and cache misses.
 
-after fix: 
-(base) student@itcenter-lab128:~/Desktop/din$ make valgrind
-gcc -Wall -g -o main main.c
-valgrind --leak-check=full --show-leak-kinds=all ./main
-==137769== Memcheck, a memory error detector
-==137769== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==137769== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
-==137769== Command: ./main
-==137769== 
-Found value at position: -1
-==137769== 
-==137769== HEAP SUMMARY:
-==137769==     in use at exit: 0 bytes in 0 blocks
-==137769==   total heap usage: 2 allocs, 2 frees, 1,064 bytes allocated
-==137769== 
-==137769== All heap blocks were freed -- no leaks are possible
-==137769== 
-==137769== For lists of detected and suppressed errors, rerun with: -s
-==137769== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+| Version       | Cycles        | Instructions  | IPC  | Cache References | Cache Misses | Time (s) |
+|---------------|--------------|---------------|------|-----------------|--------------|-----------|
+| opt1          | 1,565,823,633 | 869,298,024   | 0.56 | 9,173,913       | 7,096,235    | 0.477    |
+| opt2          | 1,576,021,771 | 866,728,117   | 0.55 | 9,529,773       | 7,438,906    | 0.480    |
+| opt3          | 1,641,815,229 | 865,735,832   | 0.53 | 9,518,510       | 7,519,421    | 0.501    |
+
+---
+### Explanation of the Assignment and Results
+
+The goal of this assignment was to improve the timestep calculation in Example_03 by applying vectorization, which lets the CPU perform multiple calculations at the same time instead of one by one. The assignment asked to make three versions of the code:  
+
+1. **`timestep_opt1.c`** – basic vectorization hints  
+2. **`timestep_opt2.c`** – better vectorization with improvements like restrict and private reductions  
+3. **`timestep_opt3.c`** – final version with compiler flags (-fno-trapping-math -fno-math-errno) to allow more aggressive vectorization  
+
+I compiled and ran all three versions and measured performance with perf. All versions give the correct minimum timestep, so the program works properly. The performance numbers are slightly different, but that’s expected because:  
+
+- Vectorization lets the CPU do multiple calculations at once.  
+- This program is small, so the CPU spends more time reading data from memory than doing calculations.  
+- Even with vectorization, the runtime may not improve much for small tests.  
+
+The key takeaway is that I successfully applied vectorization to the timestep code and learned how to check if loops are vectorized and measure their performance.
+
+---
