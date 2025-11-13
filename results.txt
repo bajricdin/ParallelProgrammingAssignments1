@@ -1,0 +1,46 @@
+(base) student@itcenter-lab128:~/Downloads/ParallelComputing-week-7/Example_06$ make run-opt2
+Running stencil_opt2...
+./stencil_opt2
+Running with 4 thread(s)
+Iter 0
+Iter 1000
+Iter 2000
+Iter 3000
+Iter 4000
+Iter 5000
+Iter 6000
+Iter 7000
+Iter 8000
+Iter 9000
+Timing is init 0.023999 flush 76.659561 stencil 144.586927 total 221.282878
+(base) student@itcenter-lab128:~/Downloads/ParallelComputing-week-7/Example_06$ make run-opt4
+Running stencil_opt4...
+./stencil_opt4
+Running with 4 thread(s)
+Iter 0
+Iter 1000
+Iter 2000
+Iter 3000
+Iter 4000
+Iter 5000
+Iter 6000
+Iter 7000
+Iter 8000
+Iter 9000
+Timing is init 0.025703 flush 72.933911 stencil 151.327071 total 224.312822
+(base) student@itcenter-lab128:~/Downloads/ParallelComputing-week-7/Example_06$ make run-opt6
+Running stencil_opt6...
+./stencil_opt6
+Running with 4 thread(s)
+Iter 0
+Iter 1000
+Iter 2000
+Iter 3000
+Iter 4000
+Iter 5000
+Iter 6000
+Iter 7000
+Iter 8000
+Iter 9000
+Timing is init 0.018778 flush 73.286068 stencil 148.392764 total 224.776450
+(base) student@itcenter-lab128:~/Downloads/ParallelComputing-week-7/Example_06$ 
