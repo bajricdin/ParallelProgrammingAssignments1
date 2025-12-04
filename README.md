@@ -1,7 +1,5 @@
 # BabelStream Benchmark - Assignment 7
 
-## Implementation Logic
-
 **OpenCL Error**  
 During the OpenCL run, I encountered the following error:
 
