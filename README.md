@@ -1,68 +1,22 @@
-# ParallelProgrammingAssignments
-First I initilized ipos and ival to avoid uninitilized values error. After that I checked if malloc succseeded in recegonizing the null or undefined behaviour.
-After that i changed the loop conditions from i <= 10 to i<10 to prevent out of bounds error. And at the end i freed allocated memory so it prevents memory leaks.
+# Batch schedulers
 
+**Top command during execition of sh files**
+<img width="736" height="844" alt="Screenshot from 2025-12-18 16-14-36" src="https://github.com/user-attachments/assets/76e63688-ce47-473f-9a52-0930807d3640" />
 
-(base) student@itcenter-lab128:~/Desktop/din$ make valgrind
-valgrind --leak-check=full --show-leak-kinds=all ./main
-==136631== Memcheck, a memory error detector
-==136631== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==136631== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
-==136631== Command: ./main
-==136631== 
-==136631== Invalid write of size 4
-==136631==    at 0x1091C6: main (main.c:7)
-==136631==  Address 0x4a9e068 is 0 bytes after a block of size 40 alloc'd
-==136631==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==136631==    by 0x109185: main (main.c:5)
-==136631== 
-==136631== Conditional jump or move depends on uninitialised value(s)
-==136631==    at 0x1091F4: main (main.c:9)
-==136631== 
-==136631== Invalid read of size 4
-==136631==    at 0x1091EF: main (main.c:9)
-==136631==  Address 0x4a9e068 is 0 bytes after a block of size 40 alloc'd
-==136631==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==136631==    by 0x109185: main (main.c:5)
-==136631== 
-==136631== 
-==136631== HEAP SUMMARY:
-==136631==     in use at exit: 40 bytes in 1 blocks
-==136631==   total heap usage: 1 allocs, 0 frees, 40 bytes allocated
-==136631== 
-==136631== 40 bytes in 1 blocks are definitely lost in loss record 1 of 1
-==136631==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==136631==    by 0x109185: main (main.c:5)
-==136631== 
-==136631== LEAK SUMMARY:
-==136631==    definitely lost: 40 bytes in 1 blocks
-==136631==    indirectly lost: 0 bytes in 0 blocks
-==136631==      possibly lost: 0 bytes in 0 blocks
-==136631==    still reachable: 0 bytes in 0 blocks
-==136631==         suppressed: 0 bytes in 0 blocks
-==136631== 
-==136631== Use --track-origins=yes to see where uninitialised values come from
-==136631== For lists of detected and suppressed errors, rerun with: -s
-==136631== ERROR SUMMARY: 14 errors from 4 contexts (suppressed: 0 from 0)
+This screenshot shows the system’s resource usage while executing the sh scripts. It displays CPU, memory, and process information. We can see how the system allocates resources to running jobs and which processes consume the most CPU and memory. The top command helps to understand resource consumption during parallel execution of the batch jobs.
 
+**Results after running stress test** 
 
+<img width="758" height="298" alt="Screenshot from 2025-12-18 16-19-38" src="https://github.com/user-attachments/assets/dd9e1ccb-42f9-441b-a8a1-85da627ee6e0" />
 
-after fix: 
-(base) student@itcenter-lab128:~/Desktop/din$ make valgrind
-gcc -Wall -g -o main main.c
-valgrind --leak-check=full --show-leak-kinds=all ./main
-==137769== Memcheck, a memory error detector
-==137769== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==137769== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
-==137769== Command: ./main
-==137769== 
-Found value at position: -1
-==137769== 
-==137769== HEAP SUMMARY:
-==137769==     in use at exit: 0 bytes in 0 blocks
-==137769==   total heap usage: 2 allocs, 2 frees, 1,064 bytes allocated
-==137769== 
-==137769== All heap blocks were freed -- no leaks are possible
-==137769== 
-==137769== For lists of detected and suppressed errors, rerun with: -s
-==137769== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+The screenshot shows the output after running the stress test on 4 CPU cores. The test successfully utilized the requested number of cores, demonstrating how SLURM schedules and allocates resources for parallel tasks. The system was under heavy load for 60 seconds, using all available CPU cores for computation.
+
+**Screenshot of terminal after running squque for few times during execution of sh files**
+<img width="736" height="844" alt="Screenshot from 2025-12-18 16-14-30" src="https://github.com/user-attachments/assets/a9132de1-a3cf-4986-b2ea-fd2e2d0c5844" />
+
+This screenshot shows the output of the squeue command, which lists the jobs in the queue. You can observe the jobs in the "Running" (R) and "Pending" (PD) states. Pending jobs are waiting for resources (e.g., CPU or memory), while running jobs are actively using those resources. This helps understand how SLURM schedules jobs and handles resource allocation for multiple tasks.
+
+**Summary**
+
+In this assignment, SLURM was used to manage and schedule batch jobs, with the compute.sh and overload.sh scripts run to test system performance. The top command was utilized to monitor CPU and memory usage during execution, showing how system resources were allocated to running tasks. Stress tests were performed on 2 and 4 CPU cores to observe the system's behavior under load. The squeue command was used to track the job queue, displaying jobs in Running and Pending states, demonstrating how SLURM efficiently schedules jobs and handles resource allocation. These tests confirmed SLURM's ability to manage multiple tasks and balance system resources effectively.
+
