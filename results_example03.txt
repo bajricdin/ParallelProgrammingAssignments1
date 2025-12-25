@@ -1,0 +1,75 @@
+=== VERSION 3: MPI-IO COLLECTIVE + HINTS ===
+Processes: 1
+Total records: 15000000
+Records per process: 15000000
+Hints applied: collective_buffering=true, aggregators=1
+
+TIMING RESULTS:
+  Read time:      10.3046 seconds
+  Compute time:   0.0658 seconds
+  Write time:     0.3074 seconds (max)
+                  0.3074 seconds (min)
+                  0.3074 seconds (avg)
+  Write variance: 0.0000 seconds
+  Total time:     11.0713 seconds
+
+PERFORMANCE:
+  Data written: 343.32 MB
+  Write bandwidth: 1117.02 MB/s
+
+=== VERSION 3: MPI-IO COLLECTIVE + HINTS ===
+Processes: 2
+Total records: 15000000
+Records per process: 7500000
+Hints applied: collective_buffering=true, aggregators=2
+
+TIMING RESULTS:
+  Read time:      5.6814 seconds
+  Compute time:   0.0210 seconds
+  Write time:     1.1826 seconds (max)
+                  0.9692 seconds (min)
+                  1.0759 seconds (avg)
+  Write variance: 0.2133 seconds
+  Total time:     7.1668 seconds
+
+PERFORMANCE:
+  Data written: 343.32 MB
+  Write bandwidth: 290.32 MB/s
+
+=== VERSION 3: MPI-IO COLLECTIVE + HINTS ===
+Processes: 4
+Total records: 15000000
+Records per process: 3750000
+Hints applied: collective_buffering=true, aggregators=4
+
+TIMING RESULTS:
+  Read time:      4.2175 seconds
+  Compute time:   0.0168 seconds
+  Write time:     0.8647 seconds (max)
+                  0.0903 seconds (min)
+                  0.3635 seconds (avg)
+  Write variance: 0.7744 seconds
+  Total time:     4.9233 seconds
+
+PERFORMANCE:
+  Data written: 343.32 MB
+  Write bandwidth: 397.04 MB/s
+
+=== VERSION 3: MPI-IO COLLECTIVE + HINTS ===
+Processes: 8
+Total records: 15000000
+Records per process: 1875000
+Hints applied: collective_buffering=true, aggregators=4
+
+TIMING RESULTS:
+  Read time:      3.0890 seconds
+  Compute time:   0.0095 seconds
+  Write time:     0.6459 seconds (max)
+                  0.1001 seconds (min)
+                  0.3795 seconds (avg)
+  Write variance: 0.5459 seconds
+  Total time:     3.9477 seconds
+
+PERFORMANCE:
+  Data written: 343.32 MB
+  Write bandwidth: 531.51 MB/s

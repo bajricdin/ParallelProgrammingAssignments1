@@ -1,0 +1,63 @@
+=== VERSION 2: MPI-IO INDEPENDENT ===
+Processes: 1
+
+Total records: 15000000
+Records per process: 15000000
+
+TIMING RESULTS:
+  Read time:    10.4957 seconds
+  Compute time: 0.0413 seconds
+  Write time:   0.3051 seconds
+  Total time:   11.4225 seconds
+
+PERFORMANCE:
+  Data written: 343.32 MB
+  Write bandwidth: 1125.35 MB/s
+
+=== VERSION 2: MPI-IO INDEPENDENT ===
+Processes: 2
+
+Total records: 15000000
+Records per process: 7500000
+
+TIMING RESULTS:
+  Read time:    5.5636 seconds
+  Compute time: 0.0203 seconds
+  Write time:   0.4015 seconds
+  Total time:   6.2152 seconds
+
+PERFORMANCE:
+  Data written: 343.32 MB
+  Write bandwidth: 855.19 MB/s
+
+=== VERSION 2: MPI-IO INDEPENDENT ===
+Processes: 4
+
+Total records: 15000000
+Records per process: 3750000
+
+TIMING RESULTS:
+  Read time:    4.0658 seconds
+  Compute time: 0.0105 seconds
+  Write time:   0.4776 seconds
+  Total time:   4.8134 seconds
+
+PERFORMANCE:
+  Data written: 343.32 MB
+  Write bandwidth: 718.83 MB/s
+
+=== VERSION 2: MPI-IO INDEPENDENT ===
+Processes: 8
+
+Total records: 15000000
+Records per process: 1875000
+
+TIMING RESULTS:
+  Read time:    3.0339 seconds
+  Compute time: 0.0073 seconds
+  Write time:   0.8439 seconds
+  Total time:   4.0225 seconds
+
+PERFORMANCE:
+  Data written: 343.32 MB
+  Write bandwidth: 406.83 MB/s

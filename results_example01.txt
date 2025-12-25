@@ -1,0 +1,63 @@
+=== VERSION 1: SERIAL I/O ===
+Processes: 1
+
+Total records: 15000000
+Records per process: 15000000
+
+TIMING RESULTS:
+  Read time:    10.0740 seconds
+  Compute time: 0.0470 seconds
+  Write time:   0.4174 seconds
+  Total time:   11.0855 seconds
+
+PERFORMANCE:
+  Data written: 343.32 MB
+  Write bandwidth: 822.60 MB/s
+
+=== VERSION 1: SERIAL I/O ===
+Processes: 2
+
+Total records: 15000000
+Records per process: 7500000
+
+TIMING RESULTS:
+  Read time:    11.0007 seconds
+  Compute time: 0.0295 seconds
+  Write time:   0.3911 seconds
+  Total time:   11.9743 seconds
+
+PERFORMANCE:
+  Data written: 343.32 MB
+  Write bandwidth: 877.74 MB/s
+
+=== VERSION 1: SERIAL I/O ===
+Processes: 4
+
+Total records: 15000000
+Records per process: 3750000
+
+TIMING RESULTS:
+  Read time:    16.0428 seconds
+  Compute time: 0.0137 seconds
+  Write time:   0.4444 seconds
+  Total time:   17.1303 seconds
+
+PERFORMANCE:
+  Data written: 343.32 MB
+  Write bandwidth: 772.50 MB/s
+
+=== VERSION 1: SERIAL I/O ===
+Processes: 8
+
+Total records: 15000000
+Records per process: 1875000
+
+TIMING RESULTS:
+  Read time:    21.2209 seconds
+  Compute time: 0.0090 seconds
+  Write time:   0.8528 seconds
+  Total time:   22.9369 seconds
+
+PERFORMANCE:
+  Data written: 343.32 MB
+  Write bandwidth: 402.57 MB/s
